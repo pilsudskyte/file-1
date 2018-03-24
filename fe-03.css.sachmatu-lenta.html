@@ -17,7 +17,7 @@
         }
 
         table.chess_table tr td {
-            border: 4px solid #500000;
+            border: 1px solid #800000;
             margin: 0;
             padding: 0;
             font-size: 40px;
@@ -32,7 +32,7 @@
 
         table.chess_table tr:nth-child(odd) td:nth-child(even),
         table.chess_table tr:nth-child(even) td:nth-child(odd) {
-            background-color: #500000;
+            background-color: #800000;
         }
 
         table.chess_table tr td.WP {
@@ -48,11 +48,15 @@
         table.chess_table tr th {
             color: black;
             font-size: 40px;
+            -webkit-transform: rotate(180deg, 90deg, 180deg, 90deg);
+            -moz-transform: rotate(180deg, 90deg, 180deg, 90deg);
+            -ms-transform: rotate(180deg, 90deg, 180deg, 90deg);
+            -o-transform: rotate(180deg, 90deg, 180deg, 90deg);
+            transform: rotate(180deg, 90deg, 180deg, 90deg);
         }
 
         table.chess_table tr th.turn_square {
             border: 10px solid broun;
-            padding-left: 10px;
         }
     </style>
     </heard>
