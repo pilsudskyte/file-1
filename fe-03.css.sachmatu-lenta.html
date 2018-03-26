@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -8,11 +9,12 @@
             width: 100%;
             min-width: 40px;
             max-width: 600px;
-            margin: 100wv;
-            padding: 80wv;
+            margin: 20vmin;
+            padding: 80vmin;
             border-collapse: collapse;
             border-spacing: 0;
             box-sizing: border-box;
+            float: left;
 
         }
 
@@ -48,15 +50,40 @@
         table.chess_table tr th {
             color: black;
             font-size: 40px;
-            -webkit-transform: rotate(180deg, 90deg, 180deg, 90deg);
-            -moz-transform: rotate(180deg, 90deg, 180deg, 90deg);
-            -ms-transform: rotate(180deg, 90deg, 180deg, 90deg);
-            -o-transform: rotate(180deg, 90deg, 180deg, 90deg);
-            transform: rotate(180deg, 90deg, 180deg, 90deg);
+        }   
+            .stilius1 {
+       -webkit-transform: rotate(-180deg);
+            -moz-transform: rotate(-180deg);
+            -ms-transform: rotate(-180deg);
+            -o-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+            transform: rotate(-180deg);
+       color: black;
+        font-size: 10px;
+        }
+      .stilius2 {
+       -webkit-transform: rotate(-270deg);
+            -moz-transform: rotate(-270deg);
+            -ms-transform: rotate(-270deg);
+            -o-transform: rotate(-270deg);
+            transform: rotate(-270deg);
+            transform: rotate(-270deg);
+       color: black;
+        font-size: 10px;
+        }
+        .stilius3 {
+       -webkit-transform: rotate(-90deg);
+            -moz-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+            -o-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+            transform: rotate(-90deg);
+       color: black;
+        font-size: 10px;
         }
 
         table.chess_table tr th.turn_square {
-            border: 10px solid broun;
+            border: 10px solid black;
         }
     </style>
     </heard>
@@ -74,7 +101,7 @@
             <th></th>
         </tr>
         <tr>
-            <th>8</th>
+            <th class="stilius3">8</th>
             <td id="A8" class="BP">&#9820;</td>
             <td id="B8" class="BP">&#9822;</td>
             <td id="C8" class="BP">&#9821;</td>
@@ -83,10 +110,10 @@
             <td id="F8" class="BP">&#9821;</td>
             <td id="G8" class="BP">&#9822;</td>
             <td id="H8" class="BP">&#9820;</td>
-            <th>8</th>
+            <th class="stilius2">8</th>
         </tr>
         <tr>
-            <th>7</th>
+            <th class="stilius3">7</th>
             <td id="A7" class="BP">&#9823;</td>
             <td id="B7" class="BP">&#9823;</td>
             <td id="C7" class="BP">&#9823;</td>
@@ -95,10 +122,10 @@
             <td id="F7" class="BP">&#9823;</td>
             <td id="G7" class="BP">&#9823;</td>
             <td id="H7" class="BP">&#9823;</td>
-            <th>7</th>
+            <th class="stilius2">7</th>
         </tr>
         <tr>
-            <th>6</th>
+            <th class="stilius3">6</th>
             <td id="A6"></td>
             <td id="B6"></td>
             <td id="C6"></td>
@@ -107,10 +134,10 @@
             <td id="F6"></td>
             <td id="G6"></td>
             <td id="H6"></td>
-            <th>6</th>
+            <th class="stilius2">6</th>
         </tr>
         <tr>
-            <th>5</th>
+            <th class="stilius3">5</th>
             <td id="A5"></td>
             <td id="B5"></td>
             <td id="C5"></td>
@@ -119,10 +146,10 @@
             <td id="F5"></td>
             <td id="G5"></td>
             <td id="H5"></td>
-            <th>5</th>
+            <th class="stilius2">5</th>
         </tr>
         <tr>
-            <th>4</th>
+            <th class="stilius3">4</th>
             <td id="A4"></td>
             <td id="B4"></td>
             <td id="C4"></td>
@@ -131,10 +158,10 @@
             <td id="F4"></td>
             <td id="G4"></td>
             <td id="H4"></td>
-            <th>4</th>
+            <th class="stilius2">4</th>
         </tr>
         <tr>
-            <th>3</th>
+            <th class="stilius3">3</th>
             <td id="A3"></td>
             <td id="B3"></td>
             <td id="C3"></td>
@@ -143,10 +170,10 @@
             <td id="F3"></td>
             <td id="G3"></td>
             <td id="H3"></td>
-            <th>3</th>
+            <th class="stilius2">3</th>
         </tr>
         <tr>
-            <th>2</th>
+            <th class="stilius3">2</th>
             <td id="A2" class="WP">&#9817;</td>
             <td id="B2" class="WP">&#9817;</td>
             <td id="C2" class="WP">&#9817;</td>
@@ -155,10 +182,10 @@
             <td id="F2" class="WP">&#9817;</td>
             <td id="G2" class="WP">&#9817;</td>
             <td id="H2" class="WP">&#9817;</td>
-            <th>2</th>
+            <th class="stilius2">2</th>
         </tr>
         <tr>
-            <th>1</th>
+            <th class="stilius3">1</th>
             <td id="A1" class="WP">&#9814;</td>
             <td id="B1" class="WP">&#9816;</td>
             <td id="C1" class="WP">&#9815;</td>
@@ -167,18 +194,17 @@
             <td id="F1" class="WP">&#9815;</td>
             <td id="G1" class="WP">&#9816;</td>
             <td id="H1" class="WP">&#9814;</td>
-            <th>1</th>
+            <th class="stilius2">1</th>
         </tr>
-        <tr>
             <th></th>
-            <th>A</th>
-            <th>B</th>
-            <th>C</th>
-            <th>D</th>
-            <th>E</th>
-            <th>F</th>
-            <th>G</th>
-            <th>H</th>
+            <th class="stilius1">A</th>
+            <th class="stilius1">B</th>
+            <th class="stilius1">C</th>
+            <th class="stilius1">D</th>
+            <th class="stilius1">E</th>
+            <th class="stilius1">F</th>
+            <th class="stilius1">G</th>
+            <th class="stilius1">H</th>
 
         </tr>
     </table>
