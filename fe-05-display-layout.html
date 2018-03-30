@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <title>CSS Layouts</title>
+    <style type="text/css">
+        #layout{
+ padding: 5px;
+  margin: 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            height:100vh;
+            width:100vmax;
+
+        }
+.top {max-width: 100vw; background-color: red;}
+.middle {max-width: 100vw; background-color: grey; height: 80vh; }
+.bottom {}
+
+#a {width: 70%; display: inline-block;}
+#b {width: 25%; display: inline-block;}
+
+#c{  background-color:yellow;
+           height: calc(100vh - 2 * 2em - 8px - 6px); 
+          width: 20%;
+
+        }
+
+ #a, #b, #d, #e, #i{ height: 10vh; }
+        
+#g, #h {height: calc(100vh - 2 * 2em - px);}
+#d, #e, #g {width: 40%;}
+
+  #f, #h {width: 10%;}
+        
+#f{ height: calc(10vh * 2);}
+
+ #i{
+            width:100vmax; 
+            background-color:mediumturquoise;
+        }      
+
+
+
+
+        .blue{
+            background-color:royalblue;
+        }
+        .green{
+            background-color:lawngreen;
+        }
+        .red{
+            background-color:tomato;
+        }
+        </style>
+
+</html>
+</head>
+
+<body>
+    <div id="layout">
+        <div class="top"> 
+            <div id="a" class="green">A</div>
+            <div id="b" class="green">B</div>
+         </div>
+        <div class="middle"> 
+            <div id="c">C</div><div id="d" class="blue">D</div><div id="e" class="blue">E</div><div id="g" class="blue">G</div>
+         <div id="f" class="red">F</div>
+            <div id="h" class="red">H</div>
+        </div> 
+        <div class="bottom">
+            <div id="i">I</div>
+        </div> 
+    </div>
+</body>
+
+</html>

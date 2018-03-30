@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Šachmatų lenta</title>
+    <style type="text/css">
+        #board-side {
+            width: 400px;
+            height: 400px;
+            border: 0.3em solid MediumBlue;
+        }
+
+        #board-side div.coord {
+            width: 40px;
+            height: 40px;
+            float: left;
+            background-color: DodgerBlue;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        #board-side div.coord.right {
+            float: right;
+            -webkit-transform: rotate(-270deg);
+            -moz-transform: rotate(-270deg);
+            -ms-transform: rotate(-270deg);
+            -o-transform: rotate(-270deg);
+            transform: rotate(-270deg);
+            transform: rotate(-270deg);
+        }
+
+        .left {
+            -webkit-transform: rotate(-90deg);
+            -moz-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+            -o-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+            transform: rotate(-90deg);
+        }
+
+        .bottom {
+            -webkit-transform: rotate(-180deg);
+            -moz-transform: rotate(-180deg);
+            -ms-transform: rotate(-180deg);
+            -o-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+            transform: rotate(-180deg);
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        #board {
+            width: 320px;
+            height: 320px;
+            position: absolute;
+            margin: 40px;
+            border: 1px solid MediumBlue;
+            margin: 40px;
+        }
+
+
+        #board div.row {
+            width: 320px;
+            height: 40px;
+            float: left;
+        }
+
+        #board div div {
+            padding: 0;
+            margin: 0;
+            width: 40px;
+            height: 40px;
+            display: block;
+            float: left;
+        }
+
+        #board div:nth-child(2n+1) div:nth-child(2n) {
+            background-color: MediumOrchid;
+        }
+
+        #board div:nth-child(2n) div:nth-child(2n+1) {
+            background-color: MediumOrchid;
+        }
+
+        .WP {
+            color: black;
+            font-size: 200%;
+            text-align: center;
+            vertical-aling: middle;
+        }
+
+        .BP {
+            color: black;
+            font-size: 200%;
+            text-align: center;
+            vertical-aling: middle;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="board-side">
+        <div class="coord"></div>
+        <div class="coord">A</div>
+        <div class="coord">B</div>
+        <div class="coord">C</div>
+        <div class="coord">D</div>
+        <div class="coord">E</div>
+        <div class="coord">F</div>
+        <div class="coord">G</div>
+        <div class="coord">H</div>
+        <div class="coord"></div>
+        <div class="coord clear left">8</div>
+        <div class="coord right">8</div>
+        <div class="coord clear left">7</div>
+        <div class="coord right">7</div>
+        <div class="coord clear left">6</div>
+        <div class="coord right">6</div>
+        <div class="coord clear left">5</div>
+        <div class="coord right">5</div>
+        <div class="coord clear left">4</div>
+        <div class="coord right">4</div>
+        <div class="coord clear left">3</div>
+        <div class="coord right">3</div>
+        <div class="coord clear left">2</div>
+        <div class="coord right">2</div>
+        <div class="coord clear left">1</div>
+        <div class="coord right">1</div>
+        <div class="coord clear"></div>
+        <div class="coord bottom">A</div>
+        <div class="coord bottom">B</div>
+        <div class="coord bottom">C</div>
+        <div class="coord bottom">D</div>
+        <div class="coord bottom">E</div>
+        <div class="coord bottom">F</div>
+        <div class="coord bottom">G</div>
+        <div class="coord bottom">H</div>
+        <div class="coord bottom"></div>
+        <div id="board">
+            <div id="row-8">
+                <div id="row-8-col-a" class="BP">&#9820;</div>
+                <div id="row-8-col-b" class="BP">&#9822;</div>
+                <div id="row-8-col-c" class="BP">&#9821;</div>
+                <div id="row-8-col-d" class="BP">&#9819;</div>
+                <div id="row-8-col-e" class="BP">&#9818;</div>
+                <div id="row-8-col-f" class="BP">&#9821;</div>
+                <div id="row-8-col-g" class="BP">&#9822;</div>
+                <div id="row-8-col-h" class="BP">&#9820;</div>
+            </div>
+            <div id="row-7">
+                <div id="row-7-col-a" class="BP">&#9823;</div>
+                <div id="row-7-col-b" class="BP">&#9823;</div>
+                <div id="row-7-col-c" class="BP">&#9823;</div>
+                <div id="row-7-col-d" class="BP">&#9823;</div>
+                <div id="row-7-col-e" class="BP">&#9823;</div>
+                <div id="row-7-col-f" class="BP">&#9823;</div>
+                <div id="row-7-col-g" class="BP">&#9823;</div>
+                <div id="row-7-col-h" class="BP">&#9823;</div>
+            </div>
+            <div id="row-6">
+                <div id="row-6-col-a"></div>
+                <div id="row-6-col-b"></div>
+                <div id="row-6-col-c"></div>
+                <div id="row-6-col-d"></div>
+                <div id="row-6-col-e"></div>
+                <div id="row-6-col-f"></div>
+                <div id="row-6-col-g"></div>
+                <div id="row-6-col-h"></div>
+            </div>
+            <div id="row-5">
+                <div id="row-5-col-a"></div>
+                <div id="row-5-col-b"></div>
+                <div id="row-5-col-c"></div>
+                <div id="row-5-col-d"></div>
+                <div id="row-5-col-e"></div>
+                <div id="row-5-col-f"></div>
+                <div id="row-5-col-g"></div>
+                <div id="row-5-col-h"></div>
+            </div>
+            <div id="row-4">
+                <div id="row-4-col-a"></div>
+                <div id="row-4-col-b"></div>
+                <div id="row-4-col-c"></div>
+                <div id="row-4-col-d"></div>
+                <div id="row-4-col-e"></div>
+                <div id="row-4-col-f"></div>
+                <div id="row-4-col-g"></div>
+                <div id="row-4-col-h"></div>
+            </div>
+            <div id="row-3">
+                <div id="row-3-col-a"></div>
+                <div id="row-3-col-b"></div>
+                <div id="row-3-col-c"></div>
+                <div id="row-3-col-d"></div>
+                <div id="row-3-col-e"></div>
+                <div id="row-3-col-f"></div>
+                <div id="row-3-col-g"></div>
+                <div id="row-3-col-h"></div>
+            </div>
+            <div id="row-2">
+                <div id="row-2-col-a" class="WP">&#9817;</div>
+                <div id="row-2-col-b" class="WP">&#9817;</div>
+                <div id="row-2-col-c" class="WP">&#9817;</div>
+                <div id="row-2-col-d" class="WP">&#9817;</div>
+                <div id="row-2-col-e" class="WP">&#9817;</div>
+                <div id="row-2-col-f" class="WP">&#9817;</div>
+                <div id="row-2-col-g" class="WP">&#9817;</div>
+                <div id="row-2-col-h" class="WP">&#9817;</div>
+            </div>
+            <div id="row-1">
+
+                <div id="row-1-col-a" class="WP">&#9814;</div>
+                <div id="row-1-col-b" class="WP">&#9816;</div>
+                <div id="row-1-col-c" class="WP">&#9815;</div>
+                <div id="row-1-col-d" class="WP">&#9813;</div>
+                <div id="row-1-col-e" class="WP">&#9812;</div>
+                <div id="row-1-col-f" class="WP">&#9815;</div>
+                <div id="row-1-col-g" class="WP">&#9816;</div>
+                <div id="row-1-col-h" class="WP">&#9814;</div>
+
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
