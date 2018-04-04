@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        fe-07-animacijos.pdf
+    </title>
+    <style>
+        #square {
+            background-color: #CCCCCC;
+            width: 50vw;
+            height: 50vw;
+            margin: auto;
+            position: relative;
+
+        }
+
+        #R,
+        #G,
+        #B {
+            margin: 30%;
+            top: calc(50% - 4vw);
+            font-size: 5vw;
+            color: white;
+            display: inline;
+            position: relative;
+        }
+
+        #red {
+            background-color: rgba(255, 38, 0, 0.596);
+            position: relative;
+            border: solid red;
+            top: 15.5%;
+            left: 15.5%;
+            animation-name: example1;
+            animation-duration: 4s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes example1 {
+            from {
+                top: 15.5%;
+                left: 15.5%;
+            }
+
+            to {
+                top: 2%;
+                left: 20%;
+            }
+        }
+
+        #green {
+            background-color: rgba(60, 255, 0, 0.61);
+            position: absolute;
+            border: solid green;
+            bottom: 15%;
+            left: 15%;
+            animation-name: example2;
+            animation-duration: 4s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes example2 {
+            from {
+                top: 15%;
+                left: 15%;
+            }
+
+            to {
+                top: 37%;
+                left: 2%;
+            }
+        }
+
+        #blue {
+            background-color: rgba(0, 38, 255, 0.507);
+            position: absolute;
+            border: solid blue;
+            bottom: 15%;
+            right: 20%;
+            animation-name: example3;
+            animation-duration: 4s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes example3 {
+            from {
+                top: 15%;
+                left: 15%;
+            }
+
+            to {
+                top: 37%;
+                left: 37%;
+            }
+        }
+
+        #red,
+        #green,
+        #blue {
+            height: 60%;
+            width: 60%;
+            text-align: center;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div id="square">
+        <div id="red">
+            <div id="R">R</div>
+        </div>
+        <div id="green">
+            <div id="G">G</div>
+        </div>
+        <div id="blue">
+            <div id="B">B</div>
+        </div>
+    </div>
+</body>
+
+</html>
