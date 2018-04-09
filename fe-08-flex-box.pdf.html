@@ -4,179 +4,178 @@
 <head>
     <meta charset="UTF-8">
     <title>fe-08-flex-box.pdf</title>
-<style>
-    body {
-        padding: 0;
-        margin: 0;
-        font-size: 20px;
-        overflow: hidden;
-    }
+    <style>
+        html {font-size: 20px;}
+        body {
+            padding: 0;
+            margin: 0;       
+        }
 
-    div {
-        border: 2px solid white;
-        padding: 0;
-        margin: 0;
-    }
+        div {
+            border: 2px solid white;
+            padding: 0;
+            margin: 0;
+        }
 
-    #container {
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        display: -webkit-flex;
-        display: -ms-flex;
-        display: -moz-flex;
-        display: -o-flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+        #container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            display: -webkit-flex;
+            display: -ms-flex;
+            display: -moz-flex;
+            display: -o-flex;
+            flex-direction: column;
+            justify-content: center;
+        }
 
-    .header,
-    .footer {
-        flex: 0 0 10%;
-        -webkit-flex: 0 0 10%;
-        -ms-flex: 0 0 10%;
-        -moz-flex: 0 0 10%;
-        -o-flex: 0 0 10%;
+        .header,
+        .footer {
+            flex: 0 0 10%;
+            -webkit-flex: 0 0 10%;
+            -ms-flex: 0 0 10%;
+            -moz-flex: 0 0 10%;
+            -o-flex: 0 0 10%;
 
-    }
+        }
 
-    .middle {
-        flex: 1;
-        -webkit-flex: 1;
-        -ms-flex: 1;
-        -moz-flex: 1;
-        -o-flex: 1;
-    }
+        .middle {
+            flex: 1;
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            -moz-flex: 1;
+            -o-flex: 1;
+        }
 
-    .header,
-    .middle,
-    .footer {
-        display: flex;
-        display: -webkit-flex;
-        display: -ms-flex;
-        display: -moz-flex;
-        display: -o-flex;
-        flex-direction: row;
-        justify-content: center;
-    }
+        .header,
+        .middle,
+        .footer {
+            display: flex;
+            display: -webkit-flex;
+            display: -ms-flex;
+            display: -moz-flex;
+            display: -o-flex;
+            flex-direction: row;
+            justify-content: center;
+        }
 
-    .a {
-        flex: 1;
-        -webkit-flex: 1;
-        -ms-flex: 1;
-        -moz-flex: 1;
-        -o-flex: 1;
-    }
+        .a {
+            flex: 1;
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            -moz-flex: 1;
+            -o-flex: 1;
+        }
 
-    .b {
-        margin-left: 0.2%;
-        flex: 0 0 25%;
-        -webkit-flex: 0 0 25%;
-        -ms-flex: 0 0 25%;
-        -moz-flex: 0 0 25%;
-        -o-flex: 0 0 25%;
-    }
+        .b {
+            margin-left: 0.2%;
+            flex: 0 0 25%;
+            -webkit-flex: 0 0 25%;
+            -ms-flex: 0 0 25%;
+            -moz-flex: 0 0 25%;
+            -o-flex: 0 0 25%;
+        }
 
-    .c {
-        flex: 0 0 25%;
-        -webkit-flex: 0 0 25%;
-        -ms-flex: 0 0 25%;
-        -moz-flex: 0 0 25%;
-        -o-flex: 0 0 25%;
-        overflow: auto;
-    }
+        .c {
+            flex: 0 0 25%;
+            -webkit-flex: 0 0 25%;
+            -ms-flex: 0 0 25%;
+            -moz-flex: 0 0 25%;
+            -o-flex: 0 0 25%;
+            overflow: auto;
+        }
 
-    .middle-right {
-        flex: 0 0 25%;
-        -webkit-flex: 0 0 25%;
-        -ms-flex: 0 0 25%;
-        -moz-flex: 0 0 25%;
-        -o-flex: 0 0 25%;
-    }
+        .middle-right {
+            flex: 0 0 25%;
+            -webkit-flex: 0 0 25%;
+            -ms-flex: 0 0 25%;
+            -moz-flex: 0 0 25%;
+            -o-flex: 0 0 25%;
+        }
 
-    .middle-middle {
-        flex: 1;
-        -webkit-flex: 1;
-        -ms-flex: 1;
-        -moz-flex: 1;
-        -o-flex: 1;
-    }
+        .middle-middle {
+            flex: 1;
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            -moz-flex: 1;
+            -o-flex: 1;
+        }
 
-    .middle-middle,
-    .middle-right {
-        display: -webkit-flex;
-        display: -ms-flex;
-        display: -moz-flex;
-        display: -o-flex;
-        flex-direction: column;
-    }
+        .middle-middle,
+        .middle-right {
+            display: -webkit-flex;
+            display: -ms-flex;
+            display: -moz-flex;
+            display: -o-flex;
+            flex-direction: column;
+        }
 
-    .d,
-    .e {
-        margin-bottom: 1%;
-        flex: 0 0 10%;
-        -webkit-flex: 0 0 10%;
-        -ms-flex: 0 0 10%;
-        -moz-flex: 0 0 10%;
-        -o-flex: 0 0 10%;
-    }
+        .d,
+        .e {
+            margin-bottom: 1%;
+            flex: 0 0 10%;
+            -webkit-flex: 0 0 10%;
+            -ms-flex: 0 0 10%;
+            -moz-flex: 0 0 10%;
+            -o-flex: 0 0 10%;
+        }
 
-    .g,
-    .h {
-        flex: 1;
-        -webkit-flex: 1;
-        -ms-flex: 1;
-        -moz-flex: 1;
-        -o-flex: 1;
-        overflow: auto;
-    }
+        .g,
+        .h {
+            flex: 1;
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            -moz-flex: 1;
+            -o-flex: 1;
+            overflow: auto;
+        }
 
-    .f {
-        margin-bottom: 2%;
-        flex: 0 0 22%;
-        -webkit-flex: 0 0 22%;
-        -ms-flex: 0 0 22%;
-        -moz-flex: 0 0 22%;
-        -o-flex: 0 0 22%;
-    }
+        .f {
+            margin-bottom: 2%;
+            flex: 0 0 22%;
+            -webkit-flex: 0 0 22%;
+            -ms-flex: 0 0 22%;
+            -moz-flex: 0 0 22%;
+            -o-flex: 0 0 22%;
+        }
 
-    .i {
-        flex: 1;
-        -webkit-flex: 1;
-        -ms-flex: 1;
-        -moz-flex: 1;
-        -o-flex: 1;
-    }
+        .i {
+            flex: 1;
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            -moz-flex: 1;
+            -o-flex: 1;
+        }
 
-    .yellow {
-        background-color: yellow;
-    }
+        .yellow {
+            background-color: yellow;
+        }
 
-    .blue {
-        background-color: royalblue;
-    }
+        .blue {
+            background-color: royalblue;
+        }
 
-    .lightblue {
-        background-color: lightblue;
-    }
+        .lightblue {
+            background-color: lightblue;
+        }
 
-    .green {
-        background-color: lawngreen;
-    }
+        .green {
+            background-color: lawngreen;
+        }
 
-    .red {
-        background-color: tomato;
-    }
-</style>
+        .red {
+            background-color: tomato;
+        }
+    </style>
 </head>
 
 <body>
-<div id="container">
-    <div class="header">
-        <div class="a green">A</div>
-        <div class="b green">B</div>
-    </div>
-    <div class="middle">
+    <div id="container">
+        <div class="header">
+            <div class="a green">A</div>
+            <div class="b green">B</div>
+        </div>
+        <div class="middle">
             <div class="c yellow">There are a variety of modern definitions of economics; some reflect evolving views of the subject or different
                 views among economists.[17][18] Scottish philosopher Adam Smith (1776) defined what was then called political
                 economy as "an inquiry into the nature and causes of the wealth of nations", in particular as: a branch of
@@ -265,10 +264,10 @@
                     definition presented may reflect the direction toward which the author believes economics is evolving,
                     or should evolve.[18]</div>
             </div>
-        <div class="middle-right">
-            <div class="f red">F</div>
-            <div class="h red">There are a variety of modern definitions of economics; some reflect evolving views of the subject or different
-                views among economists.[17][18] Scottish philosopher Adam Smith (1776) defined what was then called political
+            <div class="middle-right">
+                <div class="f red">F</div>
+                <div class="h red">There are a variety of modern definitions of economics; some reflect evolving views of the subject or different
+                    views among economists.[17][18] Scottish philosopher Adam Smith (1776) defined what was then called political
                     economy as "an inquiry into the nature and causes of the wealth of nations", in particular as: a branch
                     of the science of a statesman or legislator [with the twofold objectives of providing] a plentiful revenue
                     or subsistence for the people ... [and] to supply the state or commonwealth with a revenue for the publick
@@ -301,7 +300,7 @@
                     From the 1960s, however, such comments abated as the economic theory of maximizing behaviour and rational-choice
                     modelling expanded the domain of the subject to areas previously treated in other fields.[27] There are
                     other criticisms as well, such as in scarcity not accounting for the macroeconomics of high unemployment.[28]
-                Gary Becker, a contributor to the expansion of economics into new areas, describes the approach he favours
+                    Gary Becker, a contributor to the expansion of economics into new areas, describes the approach he favours
                     as "combin[ing the] assumptions of maximizing behaviour, stable preferences, and market equilibrium,
                     used relentlessly and unflinchingly."[29] One commentary characterizes the remark as making economics
                     an approach rather than a subject matter but with great specificity as to the "choice process and the
@@ -310,11 +309,11 @@
                     the subject-matter that the texts treat. Among economists more generally, it argues that a particular
                     definition presented may reflect the direction toward which the author believes economics is evolving,
                     or should evolve.[18]</div>
+            </div>
         </div>
-    </div>
-    <div class="footer">
-        <div class="i lightblue">I</div>
-    </div>
+        <div class="footer">
+            <div class="i lightblue">I</div>
+        </div>
 </body>
 
 </html>

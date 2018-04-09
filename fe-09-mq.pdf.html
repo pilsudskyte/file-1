@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<head>
+    <title>fe-09-mq.pdf1</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+            background-color: PaleGoldenRod;
+        }
+
+        .container {
+
+            display: flex;
+            flex-direction: column;
+            color: white;
+            width: 100vw;
+            font-size: 40px;
+
+        }
+
+        ul {
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+            list-style: none;
+            background-color: lightblue;
+            padding: 10px;
+            
+        }
+
+        #header1 {
+            display: none;
+        }
+
+        ul {
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+            list-style: none;
+            background-color: lightblue;
+            padding: 10px;
+        }
+
+        #menu1 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #article {
+            background-color: LightGreen;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+
+        #reklama {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin: 0;
+            padding: 10px 0;
+        }
+
+        #reklama div {
+            flex: 0 0 200px;
+            margin: 10px 0;
+            height: 100px;
+            width: 200px;
+            background-color: LightSlateGray;
+            padding: 15px;
+        }
+
+        #footer {
+            background-color: LightSeaGreen;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 0;
+        }
+
+        @media (min-width:760px) {
+            #middle {
+                display: flex;
+                flex-direction: row;
+            }
+            #reklama,
+            #footer,
+            #article,
+            ul {
+                margin: 10px;
+
+            }
+            #reklama {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            #header1 {
+                display: block;
+            }
+            #header2 {
+                display: none;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div id="header2">
+            <ul>
+                <li>menu</li>
+                <li>menu4</li>
+            </ul>
+        </div>
+
+        <div id="header1">
+            <ul>
+                <ul class="menu2">
+                    <li>menu1</li>
+                    <li>menu2</li>
+                    <li>menu3</li>
+                </ul>
+                <div class="menu1">
+                    <li>menu4</li>
+                </div>
+            </ul>
+        </div>
+
+        <div id="middle">
+
+            <div id="article">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula erat quis malesuada blandit. Nulla ullamcorper
+                sollicitudin dui, quis lobortis orci varius pulvinar. Sed iaculis gravida sem eu mattis. Donec vitae sem
+                libero. Vivamus id arcu eu erat lobortis ullamcorper. Nulla mollis scelerisque mi, eu dapibus mi posuere
+                vel. Mauris eu pretium odio. Sed pharetra placerat purus et vehicula. Donec ex elit, sagittis vel est vel,
+                convallis viverra ex. Proin cursus dictum lectus vel commodo. Suspendisse porta enim eu elit aliquet euismod.
+                Duis commodo consequat arcu, eu ultricies risus imperdiet nec. Pellentesque vel vulputate sapien. Donec quis
+                urna luctus, posuere enim vel, condimentum dui.</div>
+
+            <div id="reklama">
+                <div>reklama1</div>
+                <div>reklama2</div>
+                <div>reklama3</div>
+                <div>reklama4</div>
+            </div>
+        </div>
+
+        <div id="footer">Kontaktai</div>
+
+    </div>
+</body>
+
+
+</html>
