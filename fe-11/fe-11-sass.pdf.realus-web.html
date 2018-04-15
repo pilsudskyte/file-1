@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+
+<head>
+	<title>fe-09-1</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+	 crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	 crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	 crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="description" content="">
+	<meta name="author" content="Themelize.me">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link href="assets/css/theme-style.min.css" rel="stylesheet">
+	<link href="#" id="colour-scheme" rel="stylesheet">
+	<link href="assets/css/custom-style.css" rel="stylesheet">
+	<link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+	<link href="assets/plugins/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+	<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+	<link href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css" rel="stylesheet">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+	<link rel="manifest" href="assets/favicons/manifest.json">
+	<link rel="shortcut icon" href="assets/favicons/favicon.ico">
+	<meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Rambla:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/retina.js/1.3.0/retina.min.js"></script>
+</head>
+<body>
+<style type="text/css">
+	body {
+		margin: 0;
+		padding: 0;
+		font-family: Time New Roman;
+		font-size: 130%;
+
+	}
+
+	.meniu ul {
+		list-style: none;
+		text-align: right;
+		padding: 2%;
+		border-bottom: 0.1em solid lightblue;
+		font-weight: bold;
+	}
+
+	.meniu li {
+		display: inline-block;
+		margin-right: 2%;
+		font-size: 70%;
+
+	}
+
+	#menubutton {
+		visibility: hidden;
+		display: fixed;
+	}
+
+	#logo {
+		float: left;
+		font-size: 200%;
+		margin-left: 20%;
+		margin-top: 1%;
+	}
+
+	#strap {
+		color: MediumTurquoise;
+		font-weight: bold;
+	}
+
+	#app,
+	.mt-2,
+	.title-divider {
+		font-weight: bold;
+	}
+
+	li {
+		list-style: none;
+	}
+
+	.icon-5x,
+	.icon-6x {
+		font-size: 400%;
+		color: MediumTurquoise;
+	}
+
+	.icon-8x {
+		font-size: 800%;
+		color: MediumTurquoise;
+	}
+
+	.bg-primary {
+		background-color: MediumTurquoise!important;
+	}
+
+	a {
+		color: lightseagreen;
+		text-decoration: none;
+	}
+
+	#submit {
+		width: 15%;
+		background-color: MediumTurquoise;
+		color: white;
+	}
+
+	#block1 {
+		display: flex;
+		flex-direction: row;
+		background-color: MediumTurquoise;
+		margin-top: 4%;
+		font-weight: bold;
+
+	}
+
+	#text1 {
+		flex: 0 1 80%;
+	}
+
+	#get {
+		display: flex;
+		flex: 0 2 50%;
+		background-color: MediumTurquoise;
+		justify-content: center;
+		align-items: center;
+
+	}
+
+	.color-3 {
+		background-color: Teal;
+		color: white;
+		border: none;
+		border-radius: 360px;
+	}
+
+	#text {
+		padding-left: 2%;
+
+	}
+
+	#awesome {
+		color: white;
+		font-weight: bold;
+	}
+
+	#text3 {
+		color: white;
+		font-weight: bold;
+	}
+
+	#features {
+		color: Teal;
+		font-weight: bold;
+	}
+
+	.y {
+		color: Teal;
+	}
+
+	#block2 {
+		display: flex;
+		flex-direction: row;
+		background-color: black;
+		color: white;
+
+	}
+
+	ul {
+		list-style: none;
+
+	}
+
+
+	#col1,
+	#col2,
+	#col3 {
+		flex: 0 0 30%;
+		margin-top: 3%;
+		margin-bottom: 5%;
+	}
+
+	#email2 {
+		width: 60%;
+		color: black;
+	}
+
+	#submit2 {
+		width: 16%;
+		background-color: lightseagreen;
+		color: white;
+		margin-top: 5%;
+
+	}
+
+	#nowrap {
+		white-space: nowrap;
+	}
+
+	@media (max-width: 500px) {
+		#menubutton {
+			visibility: visible;
+			display: fixed;
+		}
+		.element {
+			visibility: hidden;
+		}
+		#text1 {
+			flex: 0 0 0;
+		}
+		#col1,
+		#col2,
+		#col3 {
+			flex: 0 0 0;
+
+		}
+		#get {
+			display: flex;
+			flex: 0 2 10%;
+		}
+
+		#block1 {
+			flex-direction: column;
+			text-align: center;
+			padding-bottom: 1em;
+			margin-bottom: 0;
+
+		}
+		#block2 {
+			flex-direction: column;
+		}
+	}
+</style>
+</head>
+
+<body>
+	<div class="meniu">
+		<div id="logo">
+			<span id="app">App</span>
+			<span id="strap">Strap</span>
+			<span id="app">.</span>
+		</div>
+		<ul>
+			<li class="element">
+				<span class="glyphicon glyphicon-home"></span>
+			</li>
+			<li class="element">PAGES</li>
+			<li class="element">FEATURE</li>
+			<li class="element">SHOP</li>
+			<li class="element">ELEMENTS</li>
+			<li class="element">MEGA MENU</li>
+			<li id="menubutton">
+				<span class="glyphicon glyphicon-menu-hamburger"></span>
+			</li>
+			<li id="search">
+				<span class="glyphicon glyphicon-search"></span>
+			</li>
+		</ul>
+	</div>
+	</div>
+	</div>
+	<div id="content">
+		<div class="container">
+			<h2 class="title-divider">
+				<span>Core
+					<span class="font-weight-normal">Features</span>
+				</span>
+				<small>
+					<h5>Core features included in all plans.</h5>
+				</small>
+			</h2>
+			<div class="row text-center mb-4">
+				<div class="col-lg-4">
+					<i class="fa fa-tachometer-alt icon-5x"></i>
+					<h4 class="mt-2">
+						Fully Optimized
+					</h4>
+					<p>Eligo ibidem populus usitas. Adipiscing commoveo cui sed vindico vulputate.</p>
+				</div>
+				<div class="col-lg-4">
+					<i class="fa fa-wrench icon-5x"></i>
+					<h4 class="mt-2">
+						Free Support
+					</h4>
+					<p>At commodo defui pertineo suscipit torqueo vereor. Abluo facilisi ideo in jumentum nunc similis singularis ullamcorper.</p>
+				</div>
+				<div class="col-lg-4">
+					<i class="fa fa-rocket icon-5x"></i>
+					<h4 class="mt-2">
+						Free Upgrades
+					</h4>
+					<p>Dolus in occuro scisco venio. Commoveo duis gravis hendrerit iaceo melior nutus praesent quis.</p>
+				</div>
+				<div class="col-lg-4">
+					<i class="fa fa-chart-line icon-5x"></i>
+					<h4 class="mt-2">
+						99.9% Uptime
+					</h4>
+					<p>Autem gemino importunus luctus mos nisl persto si usitas vel.</p>
+				</div>
+				<div class="col-lg-4">
+					<i class="fa fa-users icon-5x"></i>
+					<h4 class="mt-2">
+						Multiuser
+					</h4>
+					<p>Et ideo illum luptatum persto probo quis typicus velit vulputate.</p>
+				</div>
+				<div class="col-lg-4">
+					<i class="fa fa-plug icon-5x"></i>
+					<h4 class="mt-2">
+						Plug n play
+					</h4>
+					<p>Cogo diam exputo laoreet praesent quadrum scisco utrum.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-9">
+					<h3 class="title-divider">
+						<span>Bonus
+							<span class="font-weight-normal text-muted">Features</span>
+						</span>
+						<small>
+							<h5>Bonus features only included in our Pro & Pro + plans.</h5>
+						</small>
+					</h3>
+					<div class="row">
+						<div class="col-sm-4 col-md-4">
+							<li class="nav-item">
+								<span class="font-weight-bold">Mobile Friendly</span>
+								<div>
+									<small>Cause mobile matters</small>
+									</span>
+									<i class="fa fa-angle-right"></i>
+									</a>
+								</div>
+							</li>
+							<li class="nav-item">
+								<span class="font-weight-bold">24/7 Support</span>
+								<div>
+									<small>When you need it most</small>
+									<i class="fa fa-angle-right"></i>
+									</a>
+								</div>
+							</li>
+							<li class="nav-item">
+								<span class="font-weight-bold">Upgrade Assistance</span>
+								<div>
+									<small>FREE upgrades for life!</small>
+									<i class="fa fa-angle-right"></i>
+									</a>
+								</div>
+							</li>
+							<li class="nav-item">
+								<span class="font-weight-bold">99.9% Uptime</span>
+								<div>
+									<small>Rhoncus adipiscing</small>
+									<i class="fa fa-angle-right"></i>
+									</a>
+								</div>
+							</li>
+							</ul>
+						</div>
+						<div class="col-sm-8 col-md-8">
+							<div class="active col-sm-12 col-md-12">
+								<i class="fa fa-mobile icon-8x float-right ml-3"></i>
+								<h3>
+									<span class="font-weight-bold">Mobile Friendly</span>
+								</h3>
+								<p>Rhoncus adipiscing, magna integer cursus augue eros lacus porttitor magna. Dictumst, odio! Elementum tortor sociis
+									in eu dis dictumst pulvinar lorem nec aliquam a nascetur.</p>
+								<p>Rhoncus adipiscing, magna integer cursus augue eros lacus porttitor magna. </p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<h3 class="title-divider">
+						<span>Questions?</span>
+						<div>
+							<small>Get in touch!</small>
+						</div>
+					</h3>
+					<li>
+						<span class="glyphicon glyphicon-earphone"></span> 019223 8092344</li>
+					<li>
+						<span class="glyphicon glyphicon-envelope"></span> info@appstraptheme.com</li>
+					<li>
+						<span class="glyphicon glyphicon-home"></span> Sunshine House, Sunville. SUN12 8LU.</li>
+					<div class="bg-primary text-white p-3 mt-3">
+						<h4 class="my-0 font-weight-bold text-uppercase">
+							Request a callback!
+						</h4>
+						<hr class="hr-lg my-2 ml-0 hr-white w-20" />
+						<form id="callback-form" action="#" role="form">
+							<div class="input-group">
+								<label class="sr-only" for="callback-number">Your Number</label>
+								<input type="tel" class="form-control" id="callback-number" placeholder="Your Number">
+								<span class="input-group-append">
+									<button class="btn btn-dark" type="button">Go</button>
+								</span>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="block1">
+		<ul id="text1">
+			<span id="awesome">
+				<h3>AWESOME</span>
+			<span id="features">FEATURES</h3>
+			</span>
+			<span id="text3">99% Uptime</span>
+			<span class="y"> /</span>
+			<span id="text3">Free Upgrades
+				<span class="y"> /</span>
+				<span id="text3">Fully Responsive
+					<span class="y"> /</span>
+					<span id="text3">Bug Free
+		</ul>
+		<div id="get">
+			<small>
+				<button type="button" class="btn btn-round color-3">Get AppStrap Today &rarr;</button>
+			</small>
+		</div>
+	</div>
+	<div id="block2">
+		<ul id="col1">
+			<li>
+				<h5>CONTACT US</h5>
+			</li>
+			<li>
+				<span class="glyphicon glyphicon-earphone"></span> 019223 8092344</li>
+			<li>
+				<span class="glyphicon glyphicon-envelope"></span> info@appstraptheme.com</li>
+			<li>
+				<span class="glyphicon glyphicon-home"></span> Sunshine House, Sunville. SUN12 8LU.</li>
+
+		</ul>
+		<ul id="col2">
+			<li>
+				<h5>ABOUT US</h5>
+			</li>
+			<li>Making the web a prettier place one template at a time! We make beautiful, quality, responsive Drupal & web templates!</li>
+		</ul>
+		<ul id="col3">
+			<li>
+				<h5>NEWSLETTER</h5>
+			</li>
+			<li>Stay up to date with our latest news and product releases by signing up to our newsletter.</li>
+			<li>
+				<div id="nowrap">
+					<input type="text" placeholder="Email" id="email2">
+					<input type="submit" value="Go!" id="submit2">
+				</div>
+			</li>
+		</ul>
+	</div>
+</body>
+
+</html>

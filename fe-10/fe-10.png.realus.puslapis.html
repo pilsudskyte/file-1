@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+    <title>fe-09-1</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<style type="text/css">
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Time New Roman;
+
+    }
+
+    .meniu ul {
+        list-style: none;
+        text-align: right;
+        padding: 2%;
+        border-bottom: 0.1em solid lightblue;
+        font-weight: bold;
+    }
+
+    .meniu li {
+        display: inline-block;
+        margin-right: 2%;
+        font-size: 60%;
+
+    }
+
+    #logo {
+        float: left;
+        font-size: 180%;
+        margin-left: 4%;
+        margin-top: 1%;
+    }
+
+    #strap {
+        color: MediumTurquoise;
+        font-weight: bold;
+    }
+
+    #app {
+        font-weight: bold;
+    }
+
+    .login {
+        height: 210px;
+        width: 350px;
+        margin: auto;
+        border-color: #413e3e1c;
+        border-width: 10%;
+        border-style: groove;
+        padding: 1%;
+        display: fixed;
+
+    }
+
+    .login input {
+        margin-top: 1%;
+        width: 90%;
+    }
+
+    .btn-primary {
+        width: 20%;
+        height: 15%;
+        margin-top: 2%;
+        background-color: MediumTurquoise;
+    }
+
+    a {
+        color: lightseagreen;
+        text-decoration: none;
+    }
+
+    #submit {
+        width: 15%;
+        background-color: MediumTurquoise;
+        color: white;
+    }
+
+    #block1 {
+        display: flex;
+        flex-direction: row;
+        background-color: MediumTurquoise;
+        margin-top: 2%;
+        font-weight: bold;
+    }
+
+    #text1 {
+        flex: 0 1 80%;
+    }
+
+    #get {
+        display: flex;
+        flex: 0 2 50%;
+        background-color: MediumTurquoise;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .color-3 {
+        background-color: Teal;
+        color: white;
+        border: none;
+        border-radius: 360px;
+    }
+
+    #text {
+        padding-left: 2%;
+
+    }
+
+    #awesome {
+        color: white;
+        font-weight: bold;
+    }
+
+    #text3 {
+        color: white;
+        font-weight: bold;
+    }
+
+    #features {
+        color: Teal;
+        font-weight: bold;
+    }
+
+    #block2 {
+        display: flex;
+        flex-direction: row;
+        background-color: black;
+        color: white;
+    }
+
+    ul {
+        list-style: none;
+
+    }
+
+
+    #col1,
+    #col2,
+    #col3 {
+        flex: 0 0 30%;
+        margin-top: 1em;
+    }
+
+    #email2 {
+        width: 60%;
+        color: black;
+    }
+
+    #submit2 {
+        width: 15%;
+        background-color: lightseagreen;
+        color: white;
+    }
+
+    #nowrap {
+        white-space: nowrap;
+    }
+
+    #menubutton {
+       
+        display: fixed;
+    }
+
+    
+            .element {
+                visibility:hidden;
+            }
+            #block1 {
+                flex-direction: column;
+                text-align:center;
+                padding-bottom:1em;
+            }
+            #block2 {
+                flex-direction:column;
+  }
+</style>
+</head>
+
+<body>
+    <div class="meniu">
+        <div id="logo">
+            <span id="app">App</span><span id="strap">Strap</span><span id="app">.</span>
+        </div>
+        <ul>
+            <li class="element">
+                <span class="glyphicon glyphicon-home"></span>
+            </li>
+            <li class="element">PAGES</li>
+            <li class="element">FEATURE</li>
+            <li class="element">SHOP</li>
+            <li class="element">ELEMENTS</li>
+            <li class="element">MEGA MENU</li>
+            <li id="menubutton">
+                <span class="glyphicon glyphicon-menu-hamburger"></span>
+            </li>
+            <li id="search">
+                <span class="glyphicon glyphicon-search"></span>
+            </li>
+        </ul>
+    </div>
+    </div>
+    </div>
+    <div class="login">
+        <h3 style="font-weight:bold">Login</h3>
+        <br> Not signed up?
+        <a href="#">Sign up here.</a>
+        <input type="text" placeholder="Email" id="email">
+        <input type="password" placeholder="Password" id="password">
+        <small>
+            <button type="button" class="btn btn-primary">Login</button>
+        </small>
+        <a href="#" class="forgot"> | Forgotten password?</a>
+    </div>
+    <div id="block1">
+        <ul id="text1">
+            <span id="awesome">
+                <h3>AWESOME</span>
+            <span id="features">FEATURES</h3>
+            </span>
+            <span id="text3">99% Uptime</span> /
+            <span id="text3">Free Upgrades</span> /
+            <span id="text3">Fully Responsive</span> /
+            <span id="text3">Bug Free</span>
+        </ul>
+        <div id="get">
+            <small>
+                <button type="button" class="btn btn-round color-3">Get AppStrap Today &rarr;</button>
+            </small>
+        </div>
+    </div>
+    <div id="block2">
+        <ul id="col1">
+            <li>
+                <h5>CONTACT US</h5>
+            </li>
+            <li>
+                <span class="glyphicon glyphicon-earphone"></span> 019223 8092344</li>
+            <li>
+                <span class="glyphicon glyphicon-envelope"></span> info@appstraptheme.com</li>
+            <li>
+                <span class="glyphicon glyphicon-home"></span> Sunshine House, Sunville. SUN12 8LU.</li>
+
+        </ul>
+        <ul id="col2">
+            <li>
+                <h5>ABOUT US</h5>
+            </li>
+            <li>Making the web a prettier place one template at a time! We make beautiful, quality, responsive Drupal & web templates!</li>
+        </ul>
+        <ul id="col3">
+            <li>
+                <h5>NEWSLETTER</h5>
+            </li>
+            <li>Stay up to date with our latest news and product releases by signing up to our newsletter.</li>
+            <li>
+                <div id="nowrap">
+                    <input type="text" placeholder="Email" id="email2">
+                    <input type="submit" value="Go!" id="submit2">
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
