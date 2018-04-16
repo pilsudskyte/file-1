@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>fe-12</title>
+
+</head>
+<style>
+    body {
+        margin: 0;
+        background-color: rgba(77, 77, 5, 0.527);
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        width: 100vw;
+        font-size: 30px;
+        margin-left: 10%;
+    }
+</style>
+
+<body>
+    <div class=container>
+        <div id="ilgis">ilgis</div>
+        <div id="plotis">plotis</div>
+        <div id="staciakampio_perimetras">staciakampio perimetras</div>
+        <div id="staciakampio_plotas">staciakampio plotas</div>
+        <div id="staciakampio_istrizaine">staciakampio istrizaine</div>
+        <div/>
+        <script>
+            var ilgis = 100;
+            alert('"ilgis" yra ' + ilgis);
+            var plotis = 444;
+            alert('"plotis" yra ' + plotis);
+            var staciakampio_perimetras = 2 * (plotis + ilgis);
+            alert('"staciakampio_perimetras" yra ' + staciakampio_perimetras);
+            var staciakampio_plotas = ilgis * plotis;
+            alert('"staciakampio_plotas" yra ' + staciakampio_plotas);
+            var staciakampio_istrizaine = Math.sqrt(ilgis * ilgis + plotis * ilgis);
+            alert('"staciakampio_istrizaine" reikšmė yra ' + staciakampio_istrizaine);
+
+            document.getElementById("ilgis").innerHTML = '"ilgis" yra ' + ilgis;
+            document.getElementById("plotis").innerHTML = '"plotis" yra ' + plotis;
+            document.getElementById("staciakampio_perimetras").innerHTML = '"staciakampio_perimetras" yra ' + staciakampio_perimetras;
+            document.getElementById("staciakampio_plotas").innerHTML = '"staciakampio_plotas" yra ' + staciakampio_plotas;
+            document.getElementById("staciakampio_istrizaine").innerHTML = '"staciakampio_istrizaine" reikšmė yra ' + staciakampio_istrizaine;
+        </script>
+</body>
+
+</html>
