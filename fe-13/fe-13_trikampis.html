@@ -24,8 +24,7 @@
         var text = " ";
         if (a == 0 || b == 0 || c == 0) text += 'JOGS.'
         else {
-            if (a + b > c && b + c > a && a + c > b) 
-            {
+            if (a + b > c && b + c > a && a + c > b) {
                 if (a * a + b * b == c * c || a * a + c * c == b * b || c * c + b * b == a * a) text += 'Status. ';
                 else if (a == b && b == c) text += 'Lygiakrastis. ';
                 else if (a == b || b == c || c == a) text += 'Lygiasonis. ';
@@ -42,15 +41,19 @@
 </head>
 
 <body>
-    <h3>TRIKAMPIS</h3>
+        <h3>TRIKAMPIS:</h3>
     <form>
-        A: <input id="a " type="text "><br>
-        B: <input id="b " type="text "><br>
-        C: <input id="c " type="text "><br>
+            A: 
+            <div><input id="a " type="text "><br></div>
+            B: 
+            <div><input id="b " type="text "><br></div>
+            C: 
+            <div><input id="c " type="text "><br></div>
         <br>
     </form>
     <button onclick="triangleFunction() ">ATSAKYMAS</button>
     <p id = "answer "></p>
+
 
 
 
