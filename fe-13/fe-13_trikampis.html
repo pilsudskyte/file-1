@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>fe-12</title>
+    <meta http-equiv="X-UA-Compatible " content="ie=edge ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" , shrink-to-fit=no ">
+    <script src="script.js " type="text/javascript "></script>
+
+<style>
+    body {
+        margin-top: 5%;
+        margin-left: 10%;
+        background-color: rgba(77, 77, 5, 0.527);
+ }
+
+</style>
+<script>
+    function triangleFunction() {
+        var a = parseInt(document.getElementById("a ").value);
+        var b = parseInt(document.getElementById("b ").value);
+        var c = parseInt(document.getElementById("c ").value);
+        var text = " ";
+        if (a == 0 || b == 0 || c == 0)
+            text += 'JOGS.'
+        else {
+            if (a + b > c && b + c > a && a + c > b) {
+                if (a * a + b * b == c * c || a * a + c * c == b * b || c * c + b * b == a * a)
+                    text += 'Status. ';
+                else if (a == b && b == c)
+                    text += 'Lygiakrastis. ';
+                else if (a == b || b == c || c == a)
+                    text += 'Lygiasonis. ';
+                else
+                    text += 'Ivairiasonis. ';
+                var p = (a + b + c) / 2;
+                S = Math.sqrt(p * (p - a) * (p - b) * (p - c));
+                text += "Plotas yra " + S.toFixed(2);
+            }
+            else {
+                text += 'JOGS.';
+            }
+        }
+        document.getElementById("answer ").innerHTML = text;
+    } 
+</script>
+</head>
+
+<body>
+    <h3>TRIKAMPIS</h3>
+    <form>
+        A: <input id="a " type="text "><br>
+        B: <input id="b " type="text "><br>
+        C: <input id="c " type="text "><br>
+        <br>
+    </form>
+    <button onclick="triangleFunction() ">ATSAKYMAS</button>
+    <p id = "answer "></p>
+
+
+
+
+
+</body>
+
+</html>
