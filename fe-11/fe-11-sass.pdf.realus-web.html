@@ -20,32 +20,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="description" content="">
-	<meta name="author" content="Themelize.me">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<link href="assets/css/theme-style.min.css" rel="stylesheet">
-	<link href="#" id="colour-scheme" rel="stylesheet">
-	<link href="assets/css/custom-style.css" rel="stylesheet">
 	<link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
-	<link href="assets/plugins/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
-	<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
-	<link href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css" rel="stylesheet">
-	<link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
-	<link rel="manifest" href="assets/favicons/manifest.json">
-	<link rel="shortcut icon" href="assets/favicons/favicon.ico">
-	<meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Rambla:400,700' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/retina.js/1.3.0/retina.min.js"></script>
-</head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+	<head>
+
 <body>
 <style type="text/css">
 	body {
-		margin: 0;
-		padding: 0;
+			padding: 0;
 		font-family: Time New Roman;
 		font-size: 130%;
 
@@ -83,11 +66,21 @@
 		font-weight: bold;
 	}
 
+		.container {
+			margin-left: 6%;
+			margin-right: 0;
+			padding: 0;
+		}
+
 	#app,
-	.mt-2,
-	.title-divider {
+		.bold,
+		.title {
 		font-weight: bold;
 	}
+
+		.normal {
+			font-weight: normal;
+		}
 
 	li {
 		list-style: none;
@@ -138,7 +131,6 @@
 		background-color: MediumTurquoise;
 		justify-content: center;
 		align-items: center;
-
 	}
 
 	.color-3 {
@@ -153,15 +145,15 @@
 
 	}
 
-	#awesome {
-		color: white;
-		font-weight: bold;
-	}
+		#awesome,
+		#text3 {
+			color: white;
+			font-weight: bold;
+		}
 
-	#text3 {
-		color: white;
-		font-weight: bold;
-	}
+		.text4 {
+			text-align: center;
+		}
 
 	#features {
 		color: Teal;
@@ -176,13 +168,15 @@
 		display: flex;
 		flex-direction: row;
 		background-color: black;
-		color: white;
-
+					color: white;
 	}
+
+		.row {
+			flex-direction: row;
+		}
 
 	ul {
 		list-style: none;
-
 	}
 
 
@@ -238,8 +232,8 @@
 			text-align: center;
 			padding-bottom: 1em;
 			margin-bottom: 0;
-
 		}
+
 		#block2 {
 			flex-direction: column;
 		}
@@ -273,55 +267,52 @@
 	</div>
 	</div>
 	</div>
-	<div id="content">
 		<div class="container">
-			<h2 class="title-divider">
+			<h2 class="title">
 				<span>Core
-					<span class="font-weight-normal">Features</span>
+						<span class="normal">Features</span>
 				</span>
 				<small>
 					<h5>Core features included in all plans.</h5>
 				</small>
 			</h2>
-			<div class="row text-center mb-4">
+			<div class="row text4">
 				<div class="col-lg-4">
 					<i class="fa fa-tachometer-alt icon-5x"></i>
-					<h4 class="mt-2">
+						<h4 class="bold">
 						Fully Optimized
 					</h4>
 					<p>Eligo ibidem populus usitas. Adipiscing commoveo cui sed vindico vulputate.</p>
 				</div>
 				<div class="col-lg-4">
 					<i class="fa fa-wrench icon-5x"></i>
-					<h4 class="mt-2">
-						Free Support
-					</h4>
+						<h4 class="bold">Free Support</h4>
 					<p>At commodo defui pertineo suscipit torqueo vereor. Abluo facilisi ideo in jumentum nunc similis singularis ullamcorper.</p>
 				</div>
 				<div class="col-lg-4">
 					<i class="fa fa-rocket icon-5x"></i>
-					<h4 class="mt-2">
+						<h4 class="bold">
 						Free Upgrades
 					</h4>
 					<p>Dolus in occuro scisco venio. Commoveo duis gravis hendrerit iaceo melior nutus praesent quis.</p>
 				</div>
 				<div class="col-lg-4">
 					<i class="fa fa-chart-line icon-5x"></i>
-					<h4 class="mt-2">
+						<h4 class="bold">
 						99.9% Uptime
 					</h4>
 					<p>Autem gemino importunus luctus mos nisl persto si usitas vel.</p>
 				</div>
 				<div class="col-lg-4">
 					<i class="fa fa-users icon-5x"></i>
-					<h4 class="mt-2">
+						<h4 class="bold">
 						Multiuser
 					</h4>
 					<p>Et ideo illum luptatum persto probo quis typicus velit vulputate.</p>
 				</div>
 				<div class="col-lg-4">
 					<i class="fa fa-plug icon-5x"></i>
-					<h4 class="mt-2">
+						<h4 class="bold">
 						Plug n play
 					</h4>
 					<p>Cogo diam exputo laoreet praesent quadrum scisco utrum.</p>
@@ -329,9 +320,9 @@
 			</div>
 			<div class="row">
 				<div class="col-md-9">
-					<h3 class="title-divider">
+					<h3 class="title">
 						<span>Bonus
-							<span class="font-weight-normal text-muted">Features</span>
+							<span class="normal">Features</span>
 						</span>
 						<small>
 							<h5>Bonus features only included in our Pro & Pro + plans.</h5>
@@ -339,8 +330,7 @@
 					</h3>
 					<div class="row">
 						<div class="col-sm-4 col-md-4">
-							<li class="nav-item">
-								<span class="font-weight-bold">Mobile Friendly</span>
+							<span class="bold">Mobile Friendly</span>
 								<div>
 									<small>Cause mobile matters</small>
 									</span>
@@ -348,24 +338,21 @@
 									</a>
 								</div>
 							</li>
-							<li class="nav-item">
-								<span class="font-weight-bold">24/7 Support</span>
+							<span class="bold">24/7 Support</span>
 								<div>
 									<small>When you need it most</small>
 									<i class="fa fa-angle-right"></i>
 									</a>
 								</div>
 							</li>
-							<li class="nav-item">
-								<span class="font-weight-bold">Upgrade Assistance</span>
+							<span class="bold">Upgrade Assistance</span>
 								<div>
 									<small>FREE upgrades for life!</small>
 									<i class="fa fa-angle-right"></i>
 									</a>
 								</div>
 							</li>
-							<li class="nav-item">
-								<span class="font-weight-bold">99.9% Uptime</span>
+							<span class="bold">99.9% Uptime</span>
 								<div>
 									<small>Rhoncus adipiscing</small>
 									<i class="fa fa-angle-right"></i>
@@ -375,10 +362,10 @@
 							</ul>
 						</div>
 						<div class="col-sm-8 col-md-8">
-							<div class="active col-sm-12 col-md-12">
-								<i class="fa fa-mobile icon-8x float-right ml-3"></i>
+							<div class="col-sm-12 col-md-12">
+								<i class="fa fa-mobile icon-8x float-right"></i>
 								<h3>
-									<span class="font-weight-bold">Mobile Friendly</span>
+									<span class="bold">Mobile Friendly</span>
 								</h3>
 								<p>Rhoncus adipiscing, magna integer cursus augue eros lacus porttitor magna. Dictumst, odio! Elementum tortor sociis
 									in eu dis dictumst pulvinar lorem nec aliquam a nascetur.</p>
@@ -388,7 +375,7 @@
 					</div>
 				</div>
 				<div class="col-md-3">
-					<h3 class="title-divider">
+					<h3 class="title">
 						<span>Questions?</span>
 						<div>
 							<small>Get in touch!</small>
@@ -401,10 +388,9 @@
 					<li>
 						<span class="glyphicon glyphicon-home"></span> Sunshine House, Sunville. SUN12 8LU.</li>
 					<div class="bg-primary text-white p-3 mt-3">
-						<h4 class="my-0 font-weight-bold text-uppercase">
-							Request a callback!
+						<h4 class="bold">
+							REEQUEST A CALLBACK!
 						</h4>
-						<hr class="hr-lg my-2 ml-0 hr-white w-20" />
 						<form id="callback-form" action="#" role="form">
 							<div class="input-group">
 								<label class="sr-only" for="callback-number">Your Number</label>
@@ -450,7 +436,6 @@
 				<span class="glyphicon glyphicon-envelope"></span> info@appstraptheme.com</li>
 			<li>
 				<span class="glyphicon glyphicon-home"></span> Sunshine House, Sunville. SUN12 8LU.</li>
-
 		</ul>
 		<ul id="col2">
 			<li>
@@ -473,4 +458,4 @@
 	</div>
 </body>
 
-</html>
+	</html>
