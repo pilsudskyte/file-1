@@ -20,7 +20,7 @@
         var b = parseInt(document.getElementById("b ").value);
         var c = parseInt(document.getElementById("c ").value);
         var text = " ";
-        if (a == 0 || b == 0 || c == 0) text += 'JOGS.'
+        if (a == 0 || b == 0 || c == 0) text += 'JOKS.'
         else {
             if (a + b > c && b + c > a && a + c > b) {
                 if (a * a + b * b == c * c || a * a + c * c == b * b || c * c + b * b == a * a) text += 'Status. ';
@@ -30,7 +30,7 @@
                 var p = (a + b + c) / 2; S = Math.sqrt(p * (p - a) * (p - b) * (p - c)); text += "Plotas yra " + S.toFixed(2);
             }
             else {
-                text += 'JOGS.';
+                text += 'JOKS.';
             }
         }
         document.getElementById("answer ").innerHTML = text;
