@@ -7,11 +7,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>fe-14</title>
     <style>
-        body {
-            margin: 5%;
-            background-color: rgba(77, 77, 5, 0.527);
-        }
-    </style>
+            body {
+                margin: 5%;
+                background-color: rgba(77, 77, 5, 0.527);
+            }
+        </style>
+    <script>
+    function Function() {
+        var Data = parseInt(document.getElementById("Data ").value);
+        var Numeris = parseInt(document.getElementById("Numeris ").value);
+        var Atstumas = parseInt(document.getElementById("Atstumas ").value);
+        var Laikas = parseInt(document.getElementById("Laikas ").value);
+        var Greitis = parseInt(document.getElementById("Greitis ").value);
+    }
+    </script>
+   
 </head>
 
 <body>
@@ -49,7 +59,7 @@
                 '</tr>';
         }
         document.querySelector('tbody').innerHTML = tekstas;
-        
+        document.getElementById("td").innerHTML = tekstas.toFixed(2); 
     </script>
 </body>
 
