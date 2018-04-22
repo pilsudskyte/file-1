@@ -5,61 +5,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>fe-14</title>
+    <title>fe-15</title>
+</head>
     <style>
             body {
                 margin: 5%;
                 background-color: rgba(77, 77, 5, 0.527);
             }
-        </style>
-    <script>
-    function Function() {
-        var Data = parseInt(document.getElementById("Data ").value);
-        var Numeris = parseInt(document.getElementById("Numeris ").value);
-        var Atstumas = parseInt(document.getElementById("Atstumas ").value);
-        var Laikas = parseInt(document.getElementById("Laikas ").value);
-        var Greitis = parseInt(document.getElementById("Greitis ").value);
-    }
-    </script>
+
+         table {
    
-</head>
+             margin-top: 4%;
+         }
+     </style>
 
 <body>
     <h2>Lentele:</h2>
+    <label></label>
+    <input placeholder="Data" id="data">
+    <label></label>
+    <input placeholder="Numeris" id="numeris">
+    <label></label>
+    <input placeholder="Atstumas" id="atstumas">
+    <label></label>
+    <input placeholder="Laikas" id="laikas">
+    <button onclick="add()">Prideti</button>
+    <hr>
     <table border="1">
-        <thead>
-            <tr>
-                <td>Data</td>
-                <td>Numeris</td>
-                <td>Atstumas</td>
-                <td>Laikas</td>
-                <td>Greitis</td>
-            </tr>
-
-        </thead>
-        <tbody>
-
-        </tbody>
+        <tr>
+            <td>
+                <div onclick="sort('data')">Data</div>
+            </td>
+            <td>
+                <div onclick="sort('numeris')">Numeris</div>
+            </td>
+            <td>
+                <div onclick="sort('atstumas')">Atstumas metrais</div>
+            </td>
+            <td>
+                <div onclick="sort('laikas')">Laikas sekundemis</div>
+            </td>
+                <td>Greitis km/h</td>
+            <td>Veiksmai</td>
+             </tr>
+        <tbody id="a"></tbody>
     </table>
+
     <script>
-        var autos = [
-            ['2018-04-18', 'FFF066', 5000, 100],
-            ['2018-04-18', 'FFF066', 5000, 99],
-            ['2018-04-18', 'FFF066', 5000, 101]
+        var auto = [
+            { 'data': '2018-04-01', 'pavarde': 'Petras', 'numeris': 'ABC001', 'atstumas': 5000, 'laikas': 110 },
+            { 'data': '2018-02-02', 'numeris': 'ABC002', 'atstumas': 5000, 'laikas': 100 },
+            { 'data': '2018-01-03', 'numeris': 'ABC003', 'atstumas': 5000, 'laikas': 105 },
+            { 'data': '2018-01-04', 'numeris': 'ABC004', 'atstumas': 5000, 'laikas': 111 }
         ];
-        var tekstas = '';
-        for (i = 0; i < autos.length; i++) {
-            tekstas +=
-                '<tr>' +
-                '<td>' + autos[i][0] + '</td>' +
-                '<td>' + autos[i][1] + '</td>' +
-                '<td>' + autos[i][2] + '</td>' +
-                '<td>' + autos[i][3] + '</td>' +
-                '<td>' + Math.round(autos[i][2] / autos[i][3] * 3.6) + '</td>' +
-                '</tr>';
+        
+        var sortOrder;
+        function sort(laukas) {
+            sortOrder = (a, b) => {
+                return a[laukas] < b[laukas] ? -1 : a[laukas] > b[laukas] ? 1 : 0;
+            };
+            lentele();
         }
-        document.querySelector('tbody').innerHTML = tekstas;
-        document.getElementById("td").innerHTML = tekstas.toFixed(2); 
+       
+        lentele();
+
+        function lentele() {
+            var lentele = '';
+            sortOrder = sortOrder || sort('data');
+            auto.sort(sortOrder);
+            auto.forEach((a, i) => {
+                lentele +=
+                    '<tr>' +
+                    '<td>' + a.data + '</td>' +
+                    '<td>' + a.numeris + '</td>' +
+                    '<td>' + a.atstumas + '</td>' +
+                    '<td>' + a.laikas + '</td>' +
+                    '<td>' + (a.atstumas / a.laikas * 3.6).toFixed(0) + '</td>' +
+                    '<td><button onclick="trinti(' + i + ')">Trinti</button></td>'
+                '</tr>';
+            });
+            document.getElementById('a').innerHTML = lentele;
+        }
+
+        function add() {
+            auto.push({
+                'data': document.querySelector('#data').value,
+                'numeris': document.querySelector('#numeris').value,
+                'atstumas': document.querySelector('#atstumas').value,
+                'laikas': document.querySelector('#laikas').value
+            });
+            document.querySelector('#data').value = '';
+            document.querySelector('#numeris').value = '';
+            document.querySelector('#atstumas').value = '';
+            document.querySelector('#laikas').value = '';
+            lentele();
+        }
+
+        function trinti(index) {
+            auto.splice(index, 1);
+            lentele();
+        }
+
     </script>
 </body>
 
