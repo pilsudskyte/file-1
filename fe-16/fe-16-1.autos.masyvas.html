@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>fe-15</title>
+    <title>fe-16-1</title>
 </head>
 <style>
     body {
@@ -46,7 +46,9 @@
                 <div onclick="sort('laikas')">Laikas sekundemis</div>
             </td>
             <td>Greitis km/h</td>
-            <td>Veiksmai</td>
+            <td>Veiksmas1</td>
+            <td>Veiksmas2</td>
+            <td>Veiksmas3</td>
         </tr>
         <tbody id="a"></tbody>
     </table>
@@ -81,8 +83,12 @@
                     '<td>' + a.atstumas + '</td>' +
                     '<td>' + a.laikas + '</td>' +
                     '<td>' + (a.atstumas / a.laikas * 3.6).toFixed(0) + '</td>' +
-                    '<td><button onclick="trinti(' + i + ')">Trinti</button></td>'
-                '</tr>';
+                    '<td><button onclick="trinti(' + i + ')">Trinti</button></td>' +
+                    '<td><button onclick="taisyti(' + i + ')">Taisyti</button></td>' +
+                    '<td><button onclick="issaugoti(' + i + ')">Issaugoti</button></td>'
+                '</tr>'
+
+
             });
             document.getElementById('a').innerHTML = lentele;
         }
@@ -105,6 +111,26 @@
             auto.splice(index, 1);
             lentele();
         }
+        
+        function taisyti(index) {
+            var a = auto[index]
+            console.log(a);
+            document.getElementById("data").value = a.data,
+                document.getElementById("numeris").value = a.numeris,
+                document.getElementById("atstumas").value = a.atstumas,
+                document.getElementById("laikas").value = a.laikas;
+
+        }
+        function issaugoti(index) {
+            var a = auto[index]
+            a.data = document.getElementById("data").value;
+            a.numeris = document.getElementById("numeris").value;
+            a.atstumas = document.getElementById("atstumas").value;
+            a.laikas = document.getElementById("laikas").value;
+            lentele();
+
+        }
+
 
     </script>
 </body>
