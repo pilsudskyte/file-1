@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>fe-18</title>
+    <style>
+        .label {
+            margin-bottom: 1%;
+            width: 55vmin;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Slaptažodžio keitimas:</h3>
+
+    <label>
+        <input id="oldPassword" placeholder="Senas slaptažodis" type="password" class="label">
+        <br>
+    </label>
+    <label>
+        <input id="newPassword" placeholder="Naujas slaptažodis" type="password" class="label">
+        <br>
+    </label>
+    <label>
+        <input id="confirmPassword" placeholder="Pakartotinai suvesti naują slaptažodį" type="password" class="label">
+        <br>
+    </label>
+    <button onclick="onFormSubmit()">Keisti</button>
+    <br>
+    <input type="checkbox" onclick="myFunction()" value="Submit">Rodyti slaptažodį
+    <br>
+
+</body>
+<script>
+    function onFormSubmit() {
+        var oldpasswprd = document.getElementById('oldPassword').value;
+        var newpassword = document.getElementById('newPassword').value;
+        var confirmpassword = document.getElementById('confirmPassword').value;
+        if (oldPassword === "" || newpassword === "" || confirmpassword === "") {
+            alert("Prašau užpildyti visus laukus");
+            return false;
+        }
+        else if (oldpasswprd == newpassword) {
+            alert("Senas ir naujas slaptažodis turi būti skirtingi");
+            return false;
+        }
+        else if (newpassword != confirmpassword) {
+            alert("Spaptažodis netinkamas");
+            return false;
+        }
+        else if (newpassword == confirmpassword) {
+            alert("Spaptažodis pakeistas");
+            return false;
+        }
+    }
+    function myFunction() {
+        var x = document.getElementById("oldPassword");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+
+</script>
+
+</body>
+
+</html>
