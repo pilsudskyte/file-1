@@ -7,32 +7,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>fe-17</title>
     <style>
-        #kvadratas {
+        #square {
             width: 50vmin;
             height: 50vmin;
             background-color: red;
             margin: auto;
+            transition: border-radius 1s, transform 1s;
         }
 
-        #apskritimas {
-             background-color: green;
+        .animate {
              border-radius: 50%;
             transform: rotate(720deg);
             }
     </style>
-</head>
 
 <body>
-        <button id="kvadratas" onclick="clickAdd"></button>
+        <div id="square"></div>
        
     <script>
-                
-                function clickAdd() {
-                 kvadratas.onclick = document.getElementById("#apskritimas");
-               
-            }      
+            var square = document.getElementById('square');
+            square.addEventListener('click', function () {
+                square.style.backgroundColor = 'green';
+                square.className += "animate";
+            });
      
     </script>
+
 </body>
 
 </html>
