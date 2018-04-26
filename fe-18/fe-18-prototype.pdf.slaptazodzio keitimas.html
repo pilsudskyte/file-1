@@ -42,21 +42,18 @@
         var confirmpassword = document.getElementById('confirmPassword').value;
         if (oldPassword === "" || newpassword === "" || confirmpassword === "") {
             alert("Prašau užpildyti visus laukus");
-            return false;
         }
         else if (oldpasswprd == newpassword) {
             alert("Senas ir naujas slaptažodis turi būti skirtingi");
-            return false;
         }
         else if (newpassword != confirmpassword) {
             alert("Spaptažodis netinkamas");
-            return false;
         }
         else if (newpassword == confirmpassword) {
             alert("Spaptažodis pakeistas");
+        }
             return false;
         }
-    }
     function myFunction() {
         document.querySelectorAll(".label").forEach(x => {
         if (x.type === "password") {
