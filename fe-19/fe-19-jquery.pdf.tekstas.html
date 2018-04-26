@@ -5,29 +5,26 @@
     <title>jQuery - actions</title>
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+            $(document).ready(function(){
+                $("#hide").mouseenter(function(){
+                    $("p").hide();
+                });
+            $("#show").mouseleave(function () {
+                    $("p").show();
+                });
+            });
+            </script>
 </head>
 
-<body>
-        <h2>show / hide</h2>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt eget nulla quis aliquam.
-        Maecenas vel nunc mauris. Suspendisse ut gravida mauris. Fusce ut dignissim eros.
-    </p>
-    
-    
-    <mouseenter="slepti()">Slėpti</button>
-    <button onclick="rodyti()">Rodyti</button>
+            <body>
 
-    <script>
-        // show / hide
-        function slepti() {
-            $('p').hide();
-        }
-        function rodyti() {
-            $('p').show('slow');
-        }
-       
-    </script>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt eget nulla quis aliquam. Maecenas vel
+        nunc mauris. Suspendisse ut gravida mauris. Fusce ut dignissim eros.</p>
+    
+            <a id="hide">Slepti</a>
+            <a id="show">Rodyti</a>
+    
 </body>
 
-</html>
+            </html>
