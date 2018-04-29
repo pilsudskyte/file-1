@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>fe-19-1</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <style>
+        .style1 {
+            color: blueviolet;
+            cursor: pointer;
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <p> h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt eget nulla quis aliquam. Maecenas vel
+        nunc mauris. Suspendisse ut gravida mauris. Fusce ut dignissim eros.</p>
+
+    <a class="style1">Slepti</a>
+
+    <script>
+
+        $(document).ready(function () {
+            $("a").hover(function () {
+                $("p").hide(20);
+            });
+            $("a").mouseout(function () {
+                $("p").show();
+            });
+        });
+    </script>
+</body>
+
+</html>

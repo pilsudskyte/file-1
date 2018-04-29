@@ -17,6 +17,9 @@
         border: 1px solid rgb(36, 68, 36);
         margin-top: 4%;
     }
+    .red {
+        background-color: rgba(77, 5, 5, 0.527);
+    }
 </style>
 
 <body>
@@ -37,7 +40,7 @@
         <input placeholder="Laikas" id="laikas">
     </label>
 
-    <button onclick="add()">Prideti</button>
+    <button id="hidebutton" onclick="add()">Prideti</button>
     <hr>
     <table border="1">
         <tr>
@@ -92,7 +95,7 @@
                     '<td>' + a.laikas + '</td>' +
                     '<td>' + (a.atstumas / a.laikas * 3.6).toFixed(0) + '</td>' +
                     '<td><button onclick="trinti(' + i + ')">Trinti</button></td>' +
-                    '<td><button onclick="taisyti(' + i + ')">Taisyti</button></td>' +
+                    '<td><button class="red" onclick="taisyti(' + i + ')">Taisyti</button></td>' +
                     '<td><button onclick="issaugoti(' + i + ')">Issaugoti</button></td>'
                 '</tr>'
 
@@ -113,6 +116,7 @@
             document.querySelector('#atstumas').value = '';
             document.querySelector('#laikas').value = '';
             lentele();
+
         }
 
         function trinti(index) {
@@ -128,6 +132,8 @@
                 document.getElementById("atstumas").value = a.atstumas,
                 document.getElementById("laikas").value = a.laikas;
 
+                document.getElementById("hidebutton").style.display = 'none';
+
         }
         function issaugoti(index) {
             var a = auto[index]
@@ -136,6 +142,8 @@
             a.atstumas = document.getElementById("atstumas").value;
             a.laikas = document.getElementById("laikas").value;
             lentele();
+
+            document.getElementById("hidebutton").style.display = 'inline-block';
 
         }
 

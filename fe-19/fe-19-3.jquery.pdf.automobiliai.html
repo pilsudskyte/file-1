@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+    <title>fe-19-3</title>
+</head>
+<style>
+    body {
+        margin: 5%;
+        background-color: rgba(77, 77, 5, 0.527);
+    }
+
+    table {
+        border: 2px solid rgb(36, 68, 36);
+        margin-top: 4%;
+    }
+</style>
+
+<body>
+    <div class="container1">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Naujas
+        </button>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Lentele:</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <label>
+                            <input placeholder="Data" id="data">
+                        </label>
+
+                        <label>
+                            <input placeholder="Numeris" id="numeris">
+                        </label>
+
+                        <label>
+                            <input placeholder="Atstumas" id="atstumas">
+                        </label>
+
+                        <label>
+                            <input placeholder="Laikas" id="laikas">
+                        </label>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Atšaukti</button>
+                        <button id="hidesave" type="button" onclick="add()" class="btn btn-primary">Saugoti</button>
+                        <button id="hideadd" type="button" onclick="save(index)" class="btn btn-primary">Taisyti</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="modal fade" id="delate" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title"></h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Ar tikrai norite istrinti?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="trinti1()" type="button" class="btn btn-default" data-dismiss="modal">Taip</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Ne</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+
+<table border="1">
+    <tr>
+        <td>
+            <div onclick="sort('data')">Data</div>
+        </td>
+        <td>
+            <div onclick="sort('numeris')">Numeris</div>
+        </td>
+        <td>
+            <div onclick="sort('atstumas')">Atstumas metrais</div>
+        </td>
+        <td>
+            <div onclick="sort('laikas')">Laikas sekundemis</div>
+        </td>
+        <td>Greitis km/h</td>
+        <td>Veiksmas1</td>
+
+        <td>Veiksmas2</td>
+
+    </tr>
+    <tbody id="a"></tbody>
+</table>
+
+<script>
+    var auto = [
+        { 'data': '', 'pavarde': '', 'numeris': '', 'atstumas': '', 'laikas': '' }
+
+    ];
+
+    var sortOrder;
+    function sort(laukas) {
+        sortOrder = (a, b) => {
+            return a[laukas] < b[laukas] ? -1 : a[laukas] > b[laukas] ? 1 : 0;
+        };
+        lentele();
+    }
+
+    function lentele() {
+        var lentele = '';
+        sortOrder = sortOrder || sort('data');
+        auto.sort(sortOrder);
+        auto.forEach((a, i) => {
+            lentele +=
+                '<tr>' +
+                '<td>' + a.data + '</td>' +
+                '<td>' + a.numeris + '</td>' +
+                '<td>' + a.atstumas + '</td>' +
+                '<td>' + a.laikas + '</td>' +
+                '<td>' + (a.atstumas / a.laikas * 3.6).toFixed(0) + '</td>' +
+                '<td><button onclick="trinti(' + i + ')">Naikintis</button></td>' +
+                '<td><button onclick="taisyti(' + i + ')">Taisyti</bitton></td>' 
+            '</tr>'
+        });
+        document.getElementById('a').innerHTML = lentele;
+    }
+
+    function add() {
+        auto.push({
+            'data': document.querySelector('#data').value,
+            'numeris': document.querySelector('#numeris').value,
+            'atstumas': document.querySelector('#atstumas').value,
+            'laikas': document.querySelector('#laikas').value
+        });
+        document.querySelector('#data').value = '';
+        document.querySelector('#numeris').value = '';
+        document.querySelector('#atstumas').value = '';
+        document.querySelector('#laikas').value = '';
+        lentele();
+
+        //document.getElementById("hideadd").style.display = 'none';
+    }
+
+    function trinti(index) {
+        $('#delate').modal('show');
+    }
+    function trinti1(index) {
+        auto.splice(index, 1);
+        lentele();
+    }
+
+
+    function taisyti(index) {
+        $('#exampleModal').modal('show');
+        var a = auto[index]
+        console.log(a);
+        document.getElementById("data").value = a.data,
+            document.getElementById("numeris").value = a.numeris,
+            document.getElementById("atstumas").value = a.atstumas,
+            document.getElementById("laikas").value = a.laikas;
+
+    }
+    function save(index) {
+        var a = auto[index];
+        var td = '<td>' + i + '<td>'
+        console.log(a);
+        a.data = document.getElementById("data").value;
+        a.numeris = document.getElementById("numeris").value;
+        a.atstumas = document.getElementById("atstumas").value;
+        a.laikas = document.getElementById("laikas").value;
+        lentele();
+
+        //document.getElementById("hidesave").style.display = 'none';
+
+    }
+</script>
+
+</body>
+
+</html>

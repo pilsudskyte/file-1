@@ -52,15 +52,15 @@
         else if (newpassword == confirmpassword) {
             alert("Spaptažodis pakeistas");
         }
-            return false;
-        }
+        return false;
+    }
     function myFunction() {
         document.querySelectorAll(".label").forEach(x => {
-        if (x.type === "password") {
-            x.type = "text";
-        } else {
-            x.type = "password";
-        }
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
         });
     }
 
