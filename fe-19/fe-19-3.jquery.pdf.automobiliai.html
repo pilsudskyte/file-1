@@ -88,7 +88,7 @@
         </div>
     </div>
 
-    
+
 </body>
 
 <table border="1">
@@ -141,7 +141,7 @@
                 '<td>' + a.laikas + '</td>' +
                 '<td>' + (a.atstumas / a.laikas * 3.6).toFixed(0) + '</td>' +
                 '<td><button onclick="trinti(' + i + ')">Naikintis</button></td>' +
-                '<td><button onclick="taisyti(' + i + ')">Taisyti</bitton></td>' 
+                '<td><button onclick="taisyti(' + i + ')">Taisyti</bitton></td>'
             '</tr>'
         });
         document.getElementById('a').innerHTML = lentele;
@@ -163,10 +163,11 @@
         //document.getElementById("hideadd").style.display = 'none';
     }
 
-    function trinti(index) {
+    function trinti(i) {
         $('#delate').modal('show');
     }
-    function trinti1(index) {
+    function trinti1(i) {
+        var index = i;
         auto.splice(index, 1);
         lentele();
     }
