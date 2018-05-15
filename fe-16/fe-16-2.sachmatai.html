@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Šachmatų lenta</title>
+    <style type="text/css">
+        #board-side {
+            width: 400px;
+            height: 400px;
+            border: 0.3em solid MediumBlue;
+        }
+
+        #board-side div.coordinate {
+            width: 40px;
+            height: 40px;
+            float: left;
+            background-color: DodgerBlue;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        #board-side div.coordinate.right {
+            float: right;
+            -webkit-transform: rotate(-270deg);
+            -moz-transform: rotate(-270deg);
+            -ms-transform: rotate(-270deg);
+            -o-transform: rotate(-270deg);
+            transform: rotate(-270deg);
+            transform: rotate(-270deg);
+        }
+
+        .left {
+            -webkit-transform: rotate(-90deg);
+            -moz-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+            -o-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+            transform: rotate(-90deg);
+        }
+
+        .bottom {
+            -webkit-transform: rotate(-180deg);
+            -moz-transform: rotate(-180deg);
+            -ms-transform: rotate(-180deg);
+            -o-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+            transform: rotate(-180deg);
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        #board {
+            width: 320px;
+            height: 320px;
+            position: absolute;
+            margin: 40px;
+            border: 1px solid MediumBlue;
+            margin: 40px;
+        }
+
+
+        #board div.row {
+            width: 320px;
+            height: 40px;
+            float: left;
+        }
+
+        #board div div {
+            padding: 0;
+            margin: 0;
+            width: 40px;
+            height: 40px;
+            display: block;
+            float: left;
+        }
+
+        #board div:nth-child(2n+1) div:nth-child(2n) {
+            background-color: MediumOrchid;
+        }
+
+        #board div:nth-child(2n) div:nth-child(2n+1) {
+            background-color: MediumOrchid;
+        }
+
+        .WP {
+            color: black;
+            font-size: 100%;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .BP {
+            color: black;
+            font-size: 100%;
+            text-align: center;
+            vertical-align: middle;
+        }
+        #bokstas8a::after, #bokstas8h::after {
+            content: "\265C"; 
+            text-align: center; 
+            vertical-align: middle; 
+            font-size: 150%;
+        }
+        #arklys8b::after, #arklys8g::after {  
+            content: "\265E"; 
+            text-align: center; 
+            vertical-align: middle; 
+            font-size: 150%;
+            }
+       #rikis8c::after, #rikis8f::after {  
+           content: "\265D"; 
+           text-align: center; 
+           vertical-align: middle; 
+           font-size: 150%;
+           }
+        #karaliene8d::after {  
+            content: "\265B"; 
+            text-align: center; 
+            vertical-align: middle; 
+            font-size: 150%;
+            }
+       #karalius8e::after {  
+           content: "\265A"; 
+           text-align: center; 
+           vertical-align: middle; 
+           font-size: 150%;
+           }
+       #pesta7a::after, #pesta7b::after, #pesta7c::after, #pesta7d::after, #pesta7e::after, #pesta7f::after, #pesta7g::after, #pesta7h::after { 
+           content: "\265F"; 
+           text-align: center; 
+           vertical-align: middle; 
+           font-size: 150%;
+           }
+      
+       #bokstas1a::after, #bokstas1h::after {  
+           content: "\2656"; 
+           text-align: center; 
+           vertical-align: middle; 
+           font-size: 150%;
+           }
+        #arklys1b::after, #arklys1g::after {  
+            content: "\2658"; text-align: 
+            center; vertical-align: middle; 
+            font-size: 150%;
+            }
+       #rikis1c::after, #rikis1f::after {  
+           content: "\2657"; 
+           text-align: center; 
+           vertical-align: middle; 
+           font-size: 150%;
+           }
+        #karaliene1d::after {  
+            content: "\2655"; 
+            text-align: center; 
+            vertical-align: middle; 
+            font-size: 150%;
+            }
+       #karalius1e::after {  
+           content: "\2654"; 
+           text-align: center; 
+           vertical-align: middle; 
+           font-size: 150%}
+       #pesta2a::after, #pesta2b::after, #pesta2c::after, #pesta2d::after, #pesta2e::after, #pesta2f::after, #pesta2g::after, #pesta2h::after { 
+           content: "\2659"; 
+           text-align: center; 
+           vertical-align: middle; 
+           font-size: 150%}
+    </style>
+</head>
+
+<body>
+
+    <div id="board-side">
+        <div class="coordinate"></div>
+        <div class="coordinate">A</div>
+        <div class="coordinate">B</div>
+        <div class="coordinate">C</div>
+        <div class="coordinate">D</div>
+        <div class="coordinate">E</div>
+        <div class="coordinate">F</div>
+        <div class="coordinate">G</div>
+        <div class="coordinate">H</div>
+        <div class="coordinate"></div>
+        <div class="coordinate clear left">8</div>
+        <div class="coordinate right">8</div>
+        <div class="coordinate clear left">7</div>
+        <div class="coordinate right">7</div>
+        <div class="coordinate clear left">6</div>
+        <div class="coordinate right">6</div>
+        <div class="coordinate clear left">5</div>
+        <div class="coordinate right">5</div>
+        <div class="coordinate clear left">4</div>
+        <div class="coordinate right">4</div>
+        <div class="coordinate clear left">3</div>
+        <div class="coordinate right">3</div>
+        <div class="coordinate clear left">2</div>
+        <div class="coordinate right">2</div>
+        <div class="coordinate clear left">1</div>
+        <div class="coordinate right">1</div>
+        <div class="coordinate clear"></div>
+        <div class="coordinate bottom">A</div>
+        <div class="coordinate bottom">B</div>
+        <div class="coordinate bottom">C</div>
+        <div class="coordinate bottom">D</div>
+        <div class="coordinate bottom">E</div>
+        <div class="coordinate bottom">F</div>
+        <div class="coordinate bottom">G</div>
+        <div class="coordinate bottom">H</div>
+        <div class="coordinate bottom"></div>
+        <div id="board">
+            <div id="row-8">
+                </div><div id="row-8-col-a" class="BP" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="bokstas8a" draggable="true" ondragstart="drag(event)"></div>
+                </div><div id="row-8-col-b" class="BP" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="arklys8b" draggable="true" ondragstart="drag(event)"></div>
+                </div><div id="row-8-col-c" class="BP" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="rikis8c" draggable="true" ondragstart="drag(event)"></div>
+                </div><div id="row-8-col-d" class="BP" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="karaliene8d" draggable="true" ondragstart="drag(event)"></div>
+                </div><div id="row-8-col-e" class="BP" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="karalius8e" draggable="true" ondragstart="drag(event)"></div>
+                </div><div id="row-8-col-f" class="BP" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="rikis8f" draggable="true" ondragstart="drag(event)"></div>
+                </div><div id="row-8-col-g" class="BP" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="arklys8g" draggable="true" ondragstart="drag(event)"></div>
+                </div><div id="row-8-col-h" class="BP" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="bokstas8h" draggable="true" ondragstart="drag(event)"></div>
+            </div>
+            <div id="row-7">
+                </div><div id="row-7-col-a" class="BP" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="pesta7a" draggable="true" ondragstart="drag(event)"></div>
+                </div><div id="row-7-col-b" class="BP" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="pesta7b" draggable="true" ondragstart="drag(event)"></div>
+                </div><div id="row-7-col-c" class="BP" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="pesta7c" draggable="true" ondragstart="drag(event)"></div>
+                </div><div id="row-7-col-d" class="BP" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="pesta7d" draggable="true" ondragstart="drag(event)"></div>
+                </div><div id="row-7-col-e" class="BP" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="pesta7e" draggable="true" ondragstart="drag(event)"></div>
+                </div><div id="row-7-col-f" class="BP" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="pesta7f" draggable="true" ondragstart="drag(event)"></div>
+                </div><div id="row-7-col-g" class="BP" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="pesta7g" draggable="true" ondragstart="drag(event)"></div>
+                </div><div id="row-7-col-h" class="BP" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="pesta7h" draggable="true" ondragstart="drag(event)"></div>
+            </div>
+            <div id="row-6">
+                <div id="row-6-col-a" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="row-6-col-b" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="row-6-col-c" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="row-6-col-d" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="row-6-col-e" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="row-6-col-f" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="row-6-col-g" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="row-6-col-h" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+            <div id="row-5">
+                <div id="row-5-col-a" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="row-5-col-b" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="row-5-col-c" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="row-5-col-d" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="row-5-col-e" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="row-5-col-f" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="row-5-col-g" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="row-5-col-h" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+            <div id="row-4">
+                <div id="row-4-col-a" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="row-4-col-b" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="row-4-col-c" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="row-4-col-d" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="row-4-col-e" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="row-4-col-f" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="row-4-col-g" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="row-4-col-h" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+            <div id="row-3">
+                <div id="row-3-col-a" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="row-3-col-b" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="row-3-col-c" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="row-3-col-d" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="row-3-col-e" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="row-3-col-f" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="row-3-col-g" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="row-3-col-h" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+            <div id="row-2">
+            </div><div id="row-2-col-a" class="WP" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="pesta2a" draggable="true" ondragstart="drag(event)"></div>
+            </div><div id="row-2-col-b" class="WP" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="pesta2b" draggable="true" ondragstart="drag(event)"></div>
+            </div><div id="row-2-col-c" class="WP" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="pesta2c" draggable="true" ondragstart="drag(event)"></div>
+            </div><div id="row-2-col-d" class="WP" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="pesta2d" draggable="true" ondragstart="drag(event)"></div>
+            </div><div id="row-2-col-e" class="WP" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="pesta2e" draggable="true" ondragstart="drag(event)"></div>
+            </div><div id="row-2-col-f" class="WP" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="pesta2f" draggable="true" ondragstart="drag(event)"></div>
+            </div><div id="row-2-col-g" class="WP" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="pesta2g" draggable="true" ondragstart="drag(event)"></div>
+            </div><div id="row-2-col-h" class="WP" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="pesta2h" draggable="true" ondragstart="drag(event)"></div>
+            </div>
+            <div id="row-1">
+                </div><div id="row-1-col-a" class="WP" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="bokstas1a" draggable="true" ondragstart="drag(event)"></div></div>
+                <div id="row-1-col-b" class="WP" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="arklys1b" draggable="true" ondragstart="drag(event)"></div></div>
+                <div id="row-1-col-c" class="WP" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="rikis1c" draggable="true" ondragstart="drag(event)"></div></div>
+                <div id="row-1-col-d" class="WP" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="karaliene1d" draggable="true" ondragstart="drag(event)"></div></div>
+                <div id="row-1-col-e" class="WP" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="karalius1e" draggable="true" ondragstart="drag(event)"></div></div>
+                <div id="row-1-col-f" class="WP" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="rikis1f" draggable="true" ondragstart="drag(event)"></div></div>
+                <div id="row-1-col-g" class="WP" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="arklys1g" draggable="true" ondragstart="drag(event)"></div></div>
+                <div id="row-1-col-h" class="WP" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="bokstas1h" draggable="true" ondragstart="drag(event)"></div></div>
+            </div>
+        </div>
+    </div>
+        <span id="steps"><div>Ėjimai:</div></span>
+
+      <script>
+        var id, parentId;
+        function testDiv(e, id) {
+    if (id.length > 0) {
+        return false;
+    }
+    else {
+        allowDrop(e);
+        return true;
+    }
+}
+
+        function drag(e) {
+            id = e.target.id; // atsiminti elemento id
+            parentId = e.target.parentElement.id;
+            e.dataTransfer.setData("text", id);
+        }
+        function allowDrop(e) {
+            // jei tas pats arba jo tevas arba a2 tai neleidžiame "numesti"
+            if (e.target.id == id || e.target.id == parentId || 
+            e.target.id == 'bokstas1a' || e.target.id == 'arklys1b' || e.target.id == 'rikis1c'|| e.target.id == 'karaliene1d' || e.target.id == 'karalius1e'|| e.target.id == 'rikis1f' || e.target.id == 'arklys1g' || e.target.id == 'bokstas1g' || 
+            e.target.id == 'pesta7a' || e.target.id == 'pesta7b'|| e.target.id == 'pesta7c'|| e.target.id == 'pesta7d'|| e.target.id == 'pesta7e'|| e.target.id == 'pesta2f'|| e.target.id == 'pesta7g'|| e.target.id == 'pesta7h'||
+            e.target.id == 'bokstas8a' || e.target.id == 'aklys8b' || e.target.id == 'rikis8c'|| e.target.id == 'karaliene8d' || e.target.id == 'karalius8e'|| e.target.id == 'rikis8f' || e.target.id == 'arklys8g' || e.target.id == 'bokstas8g' || 
+            e.target.id == 'pesta2a' || e.target.id == 'pesta2b'|| e.target.id == 'pesta2c'|| e.target.id == 'pesta2d'|| e.target.id == 'pesta2e'|| e.target.id == 'pesta2f'|| e.target.id == 'pesta2g'|| e.target.id == 'pesta2h' ) return;
+                
+           e.preventDefault();     // reikia kviesti šitą funkciją kad leisti "numesti" elementą
+        }  
+
+        function drop(e) {
+            e.preventDefault();     // uždraudžiam standartinį naršyklės veikimą su elementu - kaip kad mygtuko paspaudimas ir pan.
+            
+            var element = document.getElementById(id);  // randame elementą
+            e.target.appendChild(element);
+            var steps = document.getElementById('steps'); 
+            var step = document.createElement("div");
+            step.innerHTML = parentId + '-' + e.target.id;
+            steps.appendChild(step);
+        }
+    </script>
+
+    </body>
+</html>
