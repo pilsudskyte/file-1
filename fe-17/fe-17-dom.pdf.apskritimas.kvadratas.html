@@ -8,33 +8,38 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>fe-17</title>
     <style>
-        #square {
+        .square {
             width: 50vmin;
             height: 50vmin;
             background-color: red;
             margin: auto;
             transition: border-radius 1s, transform 1s;
+            
         }
-
-        .animate {
+        .circle {
+            background-color: green;
             border-radius: 50%;
-            transform: rotate(720deg);
-
+             transition: border-radius 1s, transform 1s;
         }
+    
     </style>
+  </head>
+  <body>
+    <div class="square" id="element" value="false" onclick="checkClick()"></div>
 
-    <body>
-        <div id="square"></div>
 
-        <script>
-            var square = document.getElementById('square');
-            square.addEventListener('click', function () {
-                square.style.backgroundColor = 'green';
-                square.className += "animate";               
-            });
-
-        </script>
-
-    </body>
-
+    <script>
+        function circleAnimation(x) {
+            var element = document.getElementById("element");            
+            if (!x) element.classList.add("circle")
+            else element.classList.remove("circle");
+        }
+        function checkClick() {
+            if (!element.value) element.value = true;
+            else element.value = false;
+            circleAnimation(element.value);
+        }
+        
+    </script>
+  </body>
 </html>
